@@ -10,7 +10,10 @@ const Post = () => {
     setLoading(true);
     fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then((res) => res.json())
-      .then((data) => setPost(data))
+      .then((data) => {
+        setPost(data);
+        document.title = data.title;
+      })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, []);

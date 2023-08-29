@@ -5,6 +5,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    document.title = "posts page";
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
