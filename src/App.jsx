@@ -10,7 +10,7 @@ import PostLayout from "./components/PostLayout";
 
 export default function App() {
   return (
-    <>
+    <div className="max-w-[780px] mx-auto">
       <Navigation />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,6 +22,6 @@ export default function App() {
         </Route>
         <Route path="/*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   );
 }
