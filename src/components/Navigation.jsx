@@ -1,13 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="flex border-b border-blue-500 gap-x-5 py-2.5">
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/contact">Contact</Link>
-      <Link to="/posts">Posts</Link>
+    <div className="flex gap-x-5 py-2.5">
+      <NavLink to="/" activeClassName="active">
+        Home
+      </NavLink>
+      <NavLink to="/about" activeClassName="active">
+        About
+      </NavLink>
+      <NavLink to="/contact" activeClassName="active">
+        Contact
+      </NavLink>
+      <NavLink to="/posts" activeClassName="active">
+        Posts
+      </NavLink>
     </div>
   );
 }
