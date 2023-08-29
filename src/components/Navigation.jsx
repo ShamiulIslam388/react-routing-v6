@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className="flex gap-x-5 py-2.5">
+    <div className="flex gap-x-5 py-2.5 mb-10">
       <NavLink
         to="/"
         className={({ isActive }) =>
@@ -35,6 +35,14 @@ function Navigation() {
         }
       >
         Posts
+      </NavLink>
+      <NavLink
+        to="/portfolio"
+        className={({ isActive }) =>
+          isActive ? "text-blue-500 font-medium border-b-2 border-blue-500" : ""
+        }
+      >
+        Portfolio
       </NavLink>
     </div>
   );

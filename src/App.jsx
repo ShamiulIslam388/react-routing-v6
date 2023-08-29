@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 import Posts from "./pages/Posts";
 import Post from "./pages/Post";
+import Portfolio from "./pages/Portfolio";
 import PostLayout from "./components/PostLayout";
 
 export default function App() {
@@ -20,6 +21,7 @@ export default function App() {
           <Route index element={<Posts />} />
           <Route path=":id" element={<Post />} />
         </Route>
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
     </div>
